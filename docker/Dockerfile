@@ -1,4 +1,4 @@
-FROM       cyberdojofoundation/clangplusplus:4.0.0
+FROM       cyberdojofoundation/clangplusplus:5.0.1
 MAINTAINER Jon Jagger <jon@jaggersoft.com>
 
-RUN cc  --version | grep -q 4.0
+RUN cc  --version | grep -q 5.0.1
