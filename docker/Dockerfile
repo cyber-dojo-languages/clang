@@ -1,4 +1,7 @@
-FROM       cyberdojofoundation/clangplusplus:5.0.1
-MAINTAINER Jon Jagger <jon@jaggersoft.com>
+FROM  cyberdojofoundation/ubuntu-build-essential:18.04
+LABEL maintainer=jon@jaggersoft.com
 
-RUN cc  --version | grep -q 5.0.1
+RUN apt-get update \
+ && apt-get install --yes clang \
+ && update-alternatives --install /usr/bin/cc  cc  /usr/bin/clang   100 \
+ && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 100

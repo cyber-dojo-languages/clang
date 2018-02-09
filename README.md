@@ -1,3 +1,5 @@
-# clang 5.0.1
+# C (clang)
 
-![Build Status](https://travis-ci.org/cyber-dojo-languages/clang-5.0.1.svg?branch=master)
+![Build Status](https://travis-ci.org/cyber-dojo-languages/clang.svg?branch=master)
+
+Version=5.0.1
