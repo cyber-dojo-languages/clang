@@ -6,8 +6,8 @@ readonly JSON=`cat docker/image_name.json`
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
 readonly MY_DIR="$( cd "$( dirname "${0}" )" && pwd )"
-readonly EXPECTED=6.0.0
-readonly ACTUAL=$(docker run --rm -it ${IMAGE_NAME} sh -c 'cc --version')
+readonly EXPECTED=9.0.0
+readonly ACTUAL=$(docker run --rm -it ${IMAGE_NAME} sh -c 'clang --version')
 
 if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then
   echo "VERSION CONFIRMED as ${EXPECTED}"
