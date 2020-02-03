@@ -2,8 +2,6 @@
 
 cd /usr/local
 
-apt-get update
-
 apt-get install --yes \
   xz-utils \
   build-essential \
