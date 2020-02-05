@@ -6,4 +6,5 @@ RUN ./install.sh && rm ./install.sh
 
 ENV PATH=/usr/local/clang_9.0.0/bin:$PATH \
     LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:$LD_LIBRARY_PATH \
-    CC=clang
+    CC=clang \
+    CXX=clang++
