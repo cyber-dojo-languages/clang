@@ -1,8 +1,10 @@
 FROM ghcr.io/cyber-dojo-languages/ubuntu-build-essential-22-04:651ad74
 LABEL maintainer=jon@jaggersoft.com
 
-RUN apt update && sudo apt upgrade
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt install clang
 RUN apt install llvm
+
 ENV CC=clang \
     CXX=clang++
