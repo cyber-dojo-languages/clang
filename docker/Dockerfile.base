@@ -5,7 +5,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install --yes \
   clang \
-  llvm
+  llvm \
+  gcovr
 
 ENV CC=clang \
     CXX=clang++
