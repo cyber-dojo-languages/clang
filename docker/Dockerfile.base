@@ -3,8 +3,9 @@ LABEL maintainer=jon@jaggersoft.com
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt install clang
-RUN apt install llvm
+RUN apt-get update && apt-get install --yes \
+  clang \
+  llvm
 
 ENV CC=clang \
     CXX=clang++
