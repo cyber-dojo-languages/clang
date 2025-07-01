@@ -3,12 +3,12 @@ set -Eeu
 
 readonly MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 readonly REGEX="image_name\": \"(.*)\""
-readonly JSON=`cat ${MY_DIR}/docker/image_name.json`
+readonly JSON=$(cat "${MY_DIR}/docker/image_name.json")
 [[ ${JSON} =~ ${REGEX} ]]
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
-readonly EXPECTED=10.0.0
-readonly ACTUAL=$(docker run --rm -i ${IMAGE_NAME} sh -c 'clang --version')
+readonly EXPECTED=14.0.0
+readonly ACTUAL=$(docker run --rm -i "${IMAGE_NAME}" sh -c 'clang --version')
 
 if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then
   echo "VERSION CONFIRMED as ${EXPECTED}"
